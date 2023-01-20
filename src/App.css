@@ -99,6 +99,19 @@ nav {
   cursor: pointer;
 }
 
+.btn2 {
+  width: 200px;
+  border: none;
+  padding: 12px;
+  color: #fff;
+  background-color: #000;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
 .user-container {
   padding: 0px 10%;
   margin-top: 30px;
@@ -174,4 +187,10 @@ hr {
   display: block;
   margin: auto;
   width: 200px;
+}
+
+.not-found {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

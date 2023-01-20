@@ -7,7 +7,6 @@ function Navbar() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector(state => state.currentUser);
-  console.log("user in Navbar", user);
 
   const handleLogout = () => {
     window.localStorage.clear();

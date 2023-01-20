@@ -2,13 +2,15 @@ import React from 'react'
 import { useLocation } from 'react-router'
 import Navbar from '../components/Navbar';
 import { postData } from "../dummyData"
+import NotFound from './NotFound';
 
 const Post = () => {
   const location = useLocation();
   const postNumber = location.pathname.split("/")[3];
   const data = postData[postNumber - 1];
-  console.log("data", data);
-  console.log("post num ", postNumber);
+  if (!data) {
+    return <NotFound />
+  }
   return (
     <>
       <Navbar />

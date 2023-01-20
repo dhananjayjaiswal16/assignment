@@ -12,7 +12,6 @@ export const getAccessToken = (user) => {
 export const verifyAccessToken = (token) => {
   return new Promise((resolve, reject) => {
     const num = Math.random();
-    console.log("num", num);
     if (num >= 0.5) {
       resolve(true)
     } else {
