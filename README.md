@@ -38,6 +38,7 @@ Start the server
     - Login: Login page (/account/login)
     - User: User page (/account/user)
     - Post: Post page (/account/post/:post_number)
+    - NotFound
 
 - src/redux/
     - services/: for making api calls
