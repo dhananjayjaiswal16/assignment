@@ -2,16 +2,20 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../redux/services/api';
 import loginImg from "../loginImg.svg"
+import Spinner from '../components/Spinner';
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const isFetching = useSelector(state => state.isFetching)
   const dispatch = useDispatch();
   const handleClick = (e) => {
     e.preventDefault()
     login(dispatch, { email, password });
   }
-
+  if (isFetching) {
+    return <Spinner />;
+  }
   return (
     <>
       <div className="login-container">

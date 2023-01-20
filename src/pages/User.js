@@ -1,9 +1,15 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import Contact from '../components/Contact'
 import Navbar from '../components/Navbar'
 import Posts from '../components/Posts'
+import Spinner from '../components/Spinner'
 import { contactData, postData } from "../dummyData"
 const User = () => {
+  const isFetching = useSelector(state => state.isFetching)
+  if (isFetching) {
+    return <Spinner />;
+  }
   return (
     <>
       <Navbar />
