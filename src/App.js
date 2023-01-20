@@ -18,6 +18,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
+          <Route path="/" element={<Navigate to="/account/login" />} />
           <Route exact path="/account/login" element={!user ? <Login /> : <Navigate replace to="/account/user" />} />
           <Route exact path="/account/user" element={!!user ? <User /> : <Navigate replace to="/account/login" />} />
           <Route exact path="/account/post/:post_number" element={!!user ? <Post /> : <Navigate replace to="/account/login" />} />

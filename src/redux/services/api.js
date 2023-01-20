@@ -10,6 +10,7 @@ export const login = async (dispatch, user) => {
     localStorage.setItem("user", user.email);
     dispatch(loginSuccess(user));
   } catch (err) {
+    alert("Login Failed! Try again")
     dispatch(loginFailure(err));
   }
 }
